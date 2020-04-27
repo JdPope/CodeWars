@@ -1,10 +1,8 @@
 // 4.26.2020
 function twoSum(numbers, target) {
-    for(x=0;x<numbers.length-1;x++){
-        for (i=0;i<numbers.length-1;i++){
-            if (numbers[x] + numbers[i+1] === target){
-                return [x,(i+1)]
-            }
+    for (i=0; i<numbers.length-1; i++) {
+        for (j=i+1; j<numbers.length; j++) {
+            if (numbers[i] + numbers[j] === target) return [i,j]
         }
     }    
 }
