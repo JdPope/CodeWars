@@ -6,6 +6,7 @@ function twoSum(numbers, target) {
         }
     }    
 }
-
-console.log(twoSum([1234,5678,9012], 14690))
+// console.log(twoSum([1234,5678,9012], 14690))
 // answer should be [1,2]
+
+
