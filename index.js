@@ -10,18 +10,21 @@ function twoSum(numbers, target) {
 // answer should be [1,2]
 
 // 4.27.2020
-function findOdd(array) {
-    const count = array.reduce((acc, curr)=> {
-       if (typeof acc[curr] == 'undefined'){
-         acc[curr] = 1
-       }else{
-         acc[curr] += 1
-       }
-       return acc
-     }, {})
-    const oddNum = Object.entries(count).filter(pair => pair[1]%2 !=0 )
-    return parseInt(oddNum[0][0])
-}
+// function findOdd(array) {
+//     const count = array.reduce((acc, curr)=> {
+//        if (typeof acc[curr] == 'undefined'){
+//          acc[curr] = 1
+//        }else{
+//          acc[curr] += 1
+//        }
+//        return acc
+//      }, {})
+//     const oddNum = Object.entries(count).filter(pair => pair[1]%2 !=0 )
+//     return parseInt(oddNum[0][0])
+// }
+// Refactored:
+// Bitwise Exclusive Or (XOR)
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b)
 
 // console.log(findOdd([ 20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5 ]))
 // anser should be 5
