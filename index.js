@@ -27,4 +27,19 @@ function twoSum(numbers, target) {
 const findOdd = (xs) => xs.reduce((a, b) => a ^ b)
 
 // console.log(findOdd([ 20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5 ]))
-// anser should be 5
+// answer should be 5
+
+// 4.28.2020
+function order(words){
+    if (words === ''){
+      return words
+    }else{
+        const sorted = words.split(' ').map(word => word.match(/\d+/))
+                    .sort((a, b) => a - b)
+                    .map(word => word.input).join(' ')
+        return sorted
+    }   
+  }
+
+  console.log(order("is2 Thi1s T4est 3a"))
+//   answer should be "Thi1s is2 3a T4est"
