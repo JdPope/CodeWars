@@ -39,19 +39,12 @@ function order(words){
 //   answer "Thi1s is2 3a T4est"
 
 function findNumber(array){
-    array.sort((a,b) => a-b)
-        if (array[0]==1){
-            for (i=1; i < array.length;i++){
-                if( (array[i] - i) > 1){
-                    return i + 1
-                }
-            }return i+1
-        }else{
-            return 1
-        }
-} 
-
-console.log(findNumber([13,11,10,3,2,1,4,5,6,9,7,8]))
+    newArray = []
+    array.forEach(e => newArray[e-1] = e)
+    return (newArray.findIndex( el => el == undefined)+1) || array.length+1
+}
+  
+// console.log(findNumber([13,11,10,3,2,1,4,5,6,9,7,8]))
 // answer = 12
 
 
