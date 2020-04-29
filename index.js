@@ -7,7 +7,7 @@ function twoSum(numbers, target) {
     }    
 }
 // console.log(twoSum([1234,5678,9012], 14690))
-// answer should be [1,2]
+// answer = [1,2]
 
 // 4.27.2020
 // function findOdd(array) {
@@ -26,7 +26,7 @@ function twoSum(numbers, target) {
 // Bitwise Exclusive Or (XOR)
 const findOdd = (xs) => xs.reduce((a, b) => a ^ b)
 // console.log(findOdd([ 20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5 ]))
-// answer should be 5
+// answer = 5
 
 // 4.28.2020
 function order(words){
@@ -36,4 +36,23 @@ function order(words){
         .map(word => word.input).join(' ')
 }
 //   console.log(order("is2 Thi1s T4est 3a"))
-//   answer should be "Thi1s is2 3a T4est"
+//   answer "Thi1s is2 3a T4est"
+
+function findNumber(array){
+    array.sort((a,b) => a-b)
+        if (array[0]==1){
+            for (i=1; i < array.length;i++){
+                if( (array[i] - i) > 1){
+                    return i + 1
+                }
+            }return i+1
+        }else{
+            return 1
+        }
+} 
+
+console.log(findNumber([13,11,10,3,2,1,4,5,6,9,7,8]))
+// answer = 12
+
+
+
