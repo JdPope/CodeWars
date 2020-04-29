@@ -42,8 +42,7 @@ function findNumber(array){
     newArray = []
     array.forEach(e => newArray[e-1] = e)
     return (newArray.findIndex( el => el == undefined)+1) || array.length+1
-}
-  
+} 
 // console.log(findNumber([13,11,10,3,2,1,4,5,6,9,7,8]))
 // answer = 12
 
