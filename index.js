@@ -46,5 +46,25 @@ function findNumber(array){
 // console.log(findNumber([13,11,10,3,2,1,4,5,6,9,7,8]))
 // answer = 12
 
+function findNumber(array){
+    array.sort((a,b) => a-b)
+        if (array[0]==1){
+            for (i=1; i < array.length;i++){
+                if( (array[i] - i) > 1){
+                    return i + 1
+                }
+            }return i+1
+        }else{
+            return 1
+        }
+} 
+
+//6.10.2020
+var countBits = function(n) {
+    return n.toString(2)
+            .split("")
+            .filter( digit => digit == 1)
+            .length
+  };
 
 
