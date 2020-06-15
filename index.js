@@ -93,17 +93,36 @@ const data = {
     }
 
 //6.12.2020 Start
-function multiplicationTable(row,col){
-    let arr = []
-        i = 0
+// function multiplicationTable(row,col){
+//     let arr = []
+//         i = 0
         
-      addToArray(arr)
-    }
+//       addToArray(arr)
+//     }
     
-    function addToArray(arr){
+//     function addToArray(arr){
         
-        if(i>(row*col)) return arr
+//         if(i>(row*col)) return arr
       
-        return addToArray(arr)
-      }
+//         return addToArray(arr)
+//       }
 
+function multiplicationTable(row,col){
+    let array = []
+    let i = 1
+    do {
+    array.push(new Array(`${i}`,`${i+1}`))
+    i++
+    } while(i <= col)
+    return array
+}
+
+
+console.log(multiplicationTable(2,2))
+//output: [[1,2],[2,4]]
+//so you know the number of arrays will be the second argument, and the number of elements is the first argument
+//the first array will always be that number counting up from one
+//the subseuent arrays are just the that element plus its self...
+//getting closer...i feel like i need a loop for row to...that I'm calling inside the push statemement....
+//I can either manipulate i more or I could try a .shift
+//with every incrementation...i will also need to increment? I think?
