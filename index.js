@@ -92,5 +92,18 @@ const data = {
      return !data[language] ?'Welcome': data[language] 
     }
 
+//6.12.2020 Start
+function multiplicationTable(row,col){
+    let arr = []
+        i = 0
+        
+      addToArray(arr)
+    }
     
+    function addToArray(arr){
+        
+        if(i>(row*col)) return arr
+      
+        return addToArray(arr)
+      }
 
