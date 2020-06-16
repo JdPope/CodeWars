@@ -111,14 +111,16 @@ function multiplicationTable(row,col){
     let array = []
     let i = 1
     do {
-    array.push(new Array(`${i}`,`${i+1}`))
-    i++
+    array.push(new Array(i, i+i))
+    i = i*2
     } while(i <= col)
     return array
 }
 
 
 console.log(multiplicationTable(2,2))
+console.log(multiplicationTable(3,3))
+//output [[1,2,3],[2,4,6],[3,6,9]]
 //output: [[1,2],[2,4]]
 //so you know the number of arrays will be the second argument, and the number of elements is the first argument
 //the first array will always be that number counting up from one
