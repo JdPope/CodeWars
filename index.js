@@ -111,17 +111,21 @@ function multiplicationTable(row,col){
     let array = []
     let i = 1
     do {
-    array.push(new Array(i, i+i))
-    i = i*2
+        array.push(new Array(i, i+i ))
+     do {
+         //could do a .join to bring these together, but I'm really curious about how to loop and feed something into an argument field...
+         
+        } while (j < row)
+        i++
     } while(i <= col)
     return array
 }
 
 
 console.log(multiplicationTable(2,2))
+//output: [[1,2],[2,4]]
 console.log(multiplicationTable(3,3))
 //output [[1,2,3],[2,4,6],[3,6,9]]
-//output: [[1,2],[2,4]]
 //so you know the number of arrays will be the second argument, and the number of elements is the first argument
 //the first array will always be that number counting up from one
 //the subseuent arrays are just the that element plus its self...
