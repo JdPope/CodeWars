@@ -111,12 +111,8 @@ function multiplicationTable(row,col){
     let array = []
     let i = 1
     do {
-        array.push(new Array(i, i+i ))
-     do {
-         //could do a .join to bring these together, but I'm really curious about how to loop and feed something into an argument field...
-         
-        } while (j < row)
-        i++
+    array.push(new Array(i, i+i))
+    i = i*2
     } while(i <= col)
     return array
 }
