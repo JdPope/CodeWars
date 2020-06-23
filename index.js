@@ -132,7 +132,17 @@ console.log(multiplicationTable(3,3))
 
 //6.23.2020 Longest Palindrome
 longestPalindrome=function(s){
-    //your code here
+    //that is the same in reverse...some kind of sorting mechanism...
+  //so I could split it into an array...then reverse it...
+  let originalArray = s.split("")
+  let reversedArray = s.split("").reverse()
+  let completeArray = []
+  //that is the same in reverse...some kind of sorting mechanism...
+  //so I could split it into an array...then reverse it...
+  //build a loop if i sub the other array is equal to the other array...add it to the new array?
+  console.log('s', s, 's split', s.split("").reverse())
+  
+
   }
 
 console.log(longestPalindrome("a"),'output: 1')
