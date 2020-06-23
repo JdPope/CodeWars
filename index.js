@@ -128,3 +128,10 @@ console.log(multiplicationTable(3,3))
 //getting closer...i feel like i need a loop for row to...that I'm calling inside the push statemement....
 //I can either manipulate i more or I could try a .shift
 //with every incrementation...i will also need to increment? I think?
+
+//6.23.2020 Longest Palindrome
+longestPalindrome=function(s){
+    //your code here
+  }
+
+console.log(longestPalindrome("a"),'output: 1')
