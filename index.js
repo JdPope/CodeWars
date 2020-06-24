@@ -146,3 +146,8 @@ longestPalindrome=function(s){
   }
 
 console.log(longestPalindrome("a"),'output: 1')
+
+//6.24.2020
+function filter_list(l) {
+    return l.filter( e => (typeof e != 'string'))
+}
