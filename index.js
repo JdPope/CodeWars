@@ -151,3 +151,9 @@ console.log(longestPalindrome("a"),'output: 1')
 function filter_list(l) {
     return l.filter( e => (typeof e != 'string'))
 }
+
+//6.25.2020
+function positiveSum(arr) {
+    const pos = arr.filter(num => num > 0)
+    return pos.length ? pos.reduce((num, sum) => sum + num) : 0 
+}
