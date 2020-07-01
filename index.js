@@ -132,17 +132,44 @@ console.log(multiplicationTable(3,3))
 
 //6.23.2020 Longest Palindrome
 longestPalindrome=function(s){
-    let originalArray = s.split("")
-    let reversedArray = s.split("").reverse()
-    let completeArray = []
+    let sArray = s.split("") 
+     let maxLength = 0
     
-    for (i=0;i<originalArray.length;i++){
-      if (`${originalArray[i], originalArray[i+1]}` == `${reversedArray[i], reversedArray[i+1]}`){
-        completeArray.push(originalArray[i])     
-      }
-    }
-      console.log(completeArray)
-}
+     for(i=0; i<sArray.length;i++){
+       if (sArray.reverse().join().contains(s.slice(0,i+1))){
+         console.log(maxLength++)
+       }      
+     }
+   return maxLength++
+   }
+   
+       
+ //     s.forEach(e => {
+ //       if (s.reverse().contains(s[i])){
+ //         maxLength++
+ //         i++
+ //       }
+ //       i++
+ //     }
+     //compare - if true - keep - keep moving increment slice -- if true, keep
+     
+     
+ //     for (i=0;i<originalArray.length;i++){
+ //       if (`${originalArray[i], originalArray[i+1]}` == `${reversedArray[i], reversedArray[i+1]}`){
+ //         completeArray.push(originalArray[i])     
+ //       }
+ //     }
+     //slice ...increment the position where its being sliced...
+ //     baabcd
+ //     cdbaab
+ //     //want to cherck for identicle values
+ //     //what are the values next to it and do those match?
+ //     //recursive function - if you have a value and arrayReverse has the same - does array reverse has this plus the next then on down the line....
+ //     //nested for loop
+     
+ //     return completeArray.length
+ // //       console.log(completeArray.length)
+ // }
     
 
 console.log(longestPalindrome("a"),'output: 1')
